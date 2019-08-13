@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+	<changeSet author="hugohaa" id="1565119149782-1">
+		<createTable tableName="PLACES">
+			<column autoIncrement="true" name="ID" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="NAME" type="VARCHAR(255)" />
+			<column name="SLUG" type="VARCHAR(255)" >
+				<constraints unique="true" uniqueConstraintName="CNST_UNIQUE_PLACES_SLUG" />
+			</column>
+			<column name="CITY" type="VARCHAR(255)" />
+			<column name="STATE" type="VARCHAR(255)" />
+			<column name="CREATED_AT" type="datetime(6)" />
+			<column name="UPDATED_AT" type="datetime(6)" />
+		</createTable>
+	</changeSet>
+</databaseChangeLog>

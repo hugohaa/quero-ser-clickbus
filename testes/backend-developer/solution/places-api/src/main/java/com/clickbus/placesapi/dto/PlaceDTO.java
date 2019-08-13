@@ -1,7 +1,8 @@
 package com.clickbus.placesapi.dto;
 
 import java.time.LocalDateTime;
-import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,7 +20,11 @@ public class PlaceDTO {
 	private String slug;
 	private String city;
 	private String state;
+	
+	@JsonFormat(pattern = "dd.MM.yyyy HH:mm")
 	private LocalDateTime createdAt;
+	
+	@JsonFormat(pattern = "dd.MM.yyyy HH:mm")
 	private LocalDateTime updatedAt; 
 	
 }

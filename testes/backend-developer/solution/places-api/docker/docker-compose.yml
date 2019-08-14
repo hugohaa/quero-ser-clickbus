@@ -1,0 +1,27 @@
+version: "2"
+services:
+  mysql:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: mysql-clickbus
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - 3306:3306
+    networks: 
+      - clickbus-network
+  placeapi:
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: ../
+    image: hugohaa/placeapi-clickbus
+    container_name: placeapi-clickbus
+    ports: 
+      - 8080:8080
+    environment: 
+      - MYSQL_HOST=mysql-clickbus
+    networks: 
+      - clickbus-network
+networks: 
+    clickbus-network:
+      driver: bridge

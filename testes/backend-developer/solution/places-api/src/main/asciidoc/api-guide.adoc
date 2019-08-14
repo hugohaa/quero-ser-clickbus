@@ -1,0 +1,92 @@
+:snippets: ../../../target/generated-snippets
+
+= Place API Documentation
+hugo.haa@gmail.com
+:toc: left
+:sectnums:
+
+== Introduction
+This is a documentation for Place API, builded for ClickBus Backend Challenge
+
+== Persons API
+Collection of CRUD API endpoints used to manipulate persons registered in the application.
+
+=== POST /places
+Saves a place.
+
+==== HTTP Request
+include::{snippets}/save-place/http-request.adoc[]
+
+==== Request Fields
+include::{snippets}/save-place/request-fields.adoc[]
+
+==== HTTP Response
+include::{snippets}/save-place/http-response.adoc[]
+
+==== Response Fields
+include::{snippets}/save-place/response-fields.adoc[]
+
+==== CURL sample
+include::{snippets}/save-place/curl-request.adoc[]
+
+
+=== PUT /places/{id}
+Update a place.
+
+==== HTTP Request
+include::{snippets}/update-place/http-request.adoc[]
+
+==== Params
+include::{snippets}/update-place/path-parameters.adoc[]
+
+==== Request Fields
+include::{snippets}/update-place/request-fields.adoc[]
+
+==== HTTP Response
+include::{snippets}/update-place/http-response.adoc[]
+
+==== Response Fields
+include::{snippets}/update-place/response-fields.adoc[]
+
+==== CURL sample
+include::{snippets}/update-place/curl-request.adoc[]
+
+
+=== GET /places/{id}
+Get a place by it's id.
+
+==== HTTP Request
+include::{snippets}/get-place-by-id/http-request.adoc[]
+
+==== Params
+include::{snippets}/get-place-by-id/path-parameters.adoc[]
+
+==== HTTP Response
+include::{snippets}/get-place-by-id/http-response.adoc[]
+
+==== Response Fields
+include::{snippets}/get-place-by-id/response-fields.adoc[]
+
+==== CURL sample
+include::{snippets}/get-place-by-id/curl-request.adoc[]
+
+
+=== GET /places?name={NAME}
+Filter places by name. If name is not present, return all saved places.
+
+==== HTTP Request
+include::{snippets}/filter-places-by-name/http-request.adoc[]
+
+==== Params
+include::{snippets}/filter-places-by-name/request-parameters.adoc[]
+
+==== HTTP Response
+include::{snippets}/filter-places-by-name/http-response.adoc[]
+
+==== Response Fields
+include::{snippets}/filter-places-by-name/response-fields.adoc[]
+
+==== CURL sample
+include::{snippets}/filter-places-by-name/curl-request.adoc[]
+
+

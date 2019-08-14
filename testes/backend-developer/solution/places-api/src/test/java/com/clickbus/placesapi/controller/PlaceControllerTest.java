@@ -16,8 +16,6 @@ import org.springframework.web.context.WebApplicationContext;
 
 import com.clickbus.placesapi.service.PlaceService;
 
-@RunWith(SpringRunner.class)
-@WebMvcTest(PlaceController.class)
 public class PlaceControllerTest {
 
 	

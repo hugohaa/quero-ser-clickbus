@@ -2,6 +2,7 @@ package com.clickbus.placesapi.model;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,13 +26,25 @@ public class Place {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID")
 	private Long id;
 	
+	@Column(name = "NAME")
 	private String name;
+	
+	@Column(name = "SLUG")
 	private String slug;
+	
+	@Column(name = "CITY")
 	private String city;
+	
+	@Column(name = "STATE")
 	private String state;
+	
+	@Column(name = "CREATED_AT")
 	private LocalDateTime createdAt;
+	
+	@Column(name = "UPDATED_AT")
 	private LocalDateTime updatedAt;
 	
 }
